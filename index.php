@@ -1,71 +1,69 @@
 <?php
 
-    $nome = (isset($_POST['nome'])) ?$_POST['nome'] : ' ';
-    $cognome = (isset($_POST['cognome'])) ?$_POST['cognome'] : ' ';
-    $indirizzo = (isset($_POST['indirizzo'])) ?$_POST['indirizzo'] : ' ';
-
+$nome = (isset($_POST['nome'])) ? $_POST['nome'] : '';
+$Cognome = (isset($_POST['Cognome'])) ? $_POST['Cognome'] : '';
+$Indirizzo = (isset($_POST['Indirizzo'])) ? $_POST['Indirizzo'] : '';
+print $nome;
 ?>
-
-
 <!doctype html>
-<html lang="it">
+<html lang="en">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<!--style.css-->
+    <link rel="stylesheet" href="style.css">
+    
 
-    <style type="text/css">
+    
+    </head>
+    <body>
       
-    </style>
-
-    <title>Ciao, mondo!</title>
-  </head>
-  <body>
     <div class="container">
-
-      <form action="index.php" method="post">
-
-        <div class="form-group">
-          <label for="nome">Nome</label>
-          <input type="text" name="nome" class="form-control" id="nome" placeholder="Inserisci il tuo nome">
-          <small id="nome" class="form-text text-muted">We'll never share your email whit anyone else.</small> 
-        </div>
-
-        <div class="form-group">
-          <label for="cognome">Cognome</label>
-          <input type="text" class="form-control" id="cognome" placeholder="Inserisci il tuo cognome">
-        </div>
-      
-        <div class="form-group">
-          <label for="indirizzo">Indirizzo</label>
-          <textarea class="form-control" id="indirizzo" rows="3"></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-primary">Salva</button>
-      </form>
+    <div class="alert alert-primary">
     </div>
+<?php 
+   foreach ($_POST as $key => $value) {
+   print $key . ': ' . $value . '<br>';
+   }
+?>
 
+<div class="container">
+ <h1>Inserisci le tue credenziali</h1>
+<form> <div class="form-group">
+    <label for="exampleInputEmail1">Nome</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="nome" placeholder="Inserisci Nome">
+    <small id="emailHelp" class="form-text text-muted">Inserisci il tuo nome</small>
+  </div>
+   
+  </form>
+</div>
 
+<div class="container">
+<form> <div class="form-group">
+    <label for="exampleInputEmail1">Cognome</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"name="Cognome" placeholder="Inserisci Cognome">
+    <small id="emailHelp" class="form-text text-muted">Inserisci il tuo Cognome</small>
+  </div>
+     
+  </form>
+</div>
 
-    <div class ="container">
-    	<div class="alert alert-primary" role="alert">
-    		<?php
-    		  print $nome . '<br>';
-    		  print $cognome . '<br>';
-    		  print $indirizzo . 'br';
-    		?>
-    	</div>	  
-    </div>
+<div class="container">
+<form> <div class="form-group">
+    <label for="exampleInputEmail1">Indirizo</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"name="Indirizzo" placeholder="Inserisci Indirizzo">
+    <small id="emailHelp" class="form-text text-muted">Inserisci il tuo Indirizzo</small>
+  </div>
 
+<button type="Invia" class="btn btn-primary">Invia</button>
 
-
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/popper.min.js"></script>
+    </body>
+     <script src="js/jquery-3.3.1.slim.min.js"></script>
+    <script src=js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
   </body>
-</html> 
+</html
